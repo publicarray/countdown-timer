@@ -1,7 +1,7 @@
 {
     "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-    "name": "Ted Talk Timer",
-    "short_name": "Talk Timer",
+    "name": "Ted Talk Countdown",
+    "short_name": "Talk Countdown",
     "start_url": "?source=pwa",
     "scope": "/",
     "display": "fullscreen",
@@ -11,7 +11,8 @@
     "icons": [{
         "src": "images/vector.svg",
         "type": "image/svg+xml",
-        "sizes": "512x512"
+        "sizes": "512x512",
+        "purpose": "any maskable"
     }, {
         "src": "images/apple-icon-57x57.png",
         "sizes": "57x57",
@@ -35,7 +36,8 @@
     }, {
         "src": "images/android-icon-192x192.png",
         "sizes": "192x192",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "any maskable"
     }, {
         "src": "images/512x512.png",
         "sizes": "512x512",
