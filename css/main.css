@@ -9197,8 +9197,8 @@ select,
 .Set-timer__logo {
     height: 17px;
     width: auto;
+    padding-right: 8px;
     vertical-align: baseline;
-    color: red;
 }
 
 .Set-timer__options {
