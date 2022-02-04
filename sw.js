@@ -1,16 +1,16 @@
 const $ASSETS = [
     "/",
-    "/css/main.css",
-    "/js/main.js",
-    "/images/logo.svg",
-    "/images/help.svg",
-    "/images/pause.svg",
-    "/images/play.svg",
-    "/images/start-over.svg",
-    "/images/android-icon-192x192.png",
-    "/images/favicon-32x32.png",
-    "/css/fonts/3b303641-706e-4221-94c4-4fb491f4f8ef.woff2",
-    "/css/fonts/b0868b4c-234e-47d3-bc59-41ab9de3c0db.woff2"
+    "css/main.css",
+    "js/main.js",
+    "images/logo.svg",
+    "images/help.svg",
+    "images/pause.svg",
+    "images/play.svg",
+    "images/start-over.svg",
+    "images/android-icon-192x192.png",
+    "images/favicon-32x32.png",
+    "css/fonts/3b303641-706e-4221-94c4-4fb491f4f8ef.woff2",
+    "css/fonts/b0868b4c-234e-47d3-bc59-41ab9de3c0db.woff2"
 ];
 
 let cache_name = "v1.1";
