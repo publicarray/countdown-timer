@@ -1,4 +1,4 @@
-const ASSETS = [
+const $ASSETS = [
     "/",
     "/css/main.css",
     "/js/main.js",
@@ -21,14 +21,19 @@ self.addEventListener("install", event => {
         caches
         .open(cache_name)
         .then(cache => {
-            return cache.addAll(ASSETS);
+            return cache.addAll($ASSETS);
         })
         .catch(err => console.log(err))
     );
 });
 
 self.addEventListener("fetch", event => {
-    if (event.request.url === "https://timer.seby.io/") {
+    let url = event.request.url.indexOf(self.location.origin) !== -1 ?
+        event.request.url.split(`${self.location.origin}/`)[1] :
+        event.request.url;
+    let isFileCached = $ASSETS.indexOf(url) !== -1;
+
+    if (isFileCached) {
         event.respondWith(
             fetch(event.request).catch(err =>
                 self.cache.open(cache_name).then(cache => cache.match("/"))
