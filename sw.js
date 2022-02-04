@@ -2,7 +2,7 @@ const $ASSETS = [
     "/",
     "/css/main.css",
     "/js/main.js",
-    "/images/logo.png",
+    "/images/logo.svg",
     "/images/help.svg",
     "/images/pause.svg",
     "/images/play.svg",
@@ -13,7 +13,7 @@ const $ASSETS = [
     "/css/fonts/b0868b4c-234e-47d3-bc59-41ab9de3c0db.woff2"
 ];
 
-let cache_name = "v1";
+let cache_name = "v1.1";
 
 self.addEventListener("install", event => {
     console.log("start server worker");
