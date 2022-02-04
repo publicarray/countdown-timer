@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/web-manifest-combined.json",
     "name": "Ted Talk Countdown",
     "short_name": "Talk Countdown",
-    "start_url": "?source=pwa",
+    "start_url": "/?source=pwa",
     "scope": "/",
     "display": "fullscreen",
     "background_color": "#000",

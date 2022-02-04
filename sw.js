@@ -10,7 +10,8 @@ const $ASSETS = [
     "images/android-icon-192x192.png",
     "images/favicon-32x32.png",
     "css/fonts/3b303641-706e-4221-94c4-4fb491f4f8ef.woff2",
-    "css/fonts/b0868b4c-234e-47d3-bc59-41ab9de3c0db.woff2"
+    "css/fonts/b0868b4c-234e-47d3-bc59-41ab9de3c0db.woff2",
+    "manifest.json"
 ];
 
 let cache_name = "v1.1";
