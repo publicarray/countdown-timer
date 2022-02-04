@@ -1,4 +1,6 @@
+// https://web.dev/offline-cookbook/
 const $ASSETS = [
+    "?source=pwa",
     "/",
     "css/main.css",
     "js/main.js",
@@ -8,43 +10,50 @@ const $ASSETS = [
     "images/play.svg",
     "images/start-over.svg",
     "images/android-icon-192x192.png",
+    "images/apple-icon-144x144.png",
     "images/favicon-32x32.png",
+    "images/favicon-16x16.png",
     "css/fonts/3b303641-706e-4221-94c4-4fb491f4f8ef.woff2",
     "css/fonts/b0868b4c-234e-47d3-bc59-41ab9de3c0db.woff2",
     "manifest.json"
 ];
 
-let cache_name = "v1.1";
+let cacheVersion = "countdown-1.1";
 
+// cache assets
 self.addEventListener("install", event => {
-    console.log("start server worker");
+    console.log("start server worker", cacheVersion);
     event.waitUntil(
-        caches
-        .open(cache_name)
-        .then(cache => {
+        caches.open(cacheVersion).then(cache => {
             return cache.addAll($ASSETS);
         })
-        .catch(err => console.log(err))
     );
 });
 
-self.addEventListener("fetch", event => {
-    let url = event.request.url.indexOf(self.location.origin) !== -1 ?
-        event.request.url.split(`${self.location.origin}/`)[1] :
-        event.request.url;
-    let isFileCached = $ASSETS.indexOf(url) !== -1;
 
-    if (isFileCached) {
-        event.respondWith(
-            fetch(event.request).catch(err =>
-                self.cache.open(cache_name).then(cache => cache.match("/"))
-            )
-        );
-    } else {
-        event.respondWith(
-            fetch(event.request).catch(err =>
-                caches.match(event.request).then(response => response)
-            )
-        );
-    }
+// respond with the cached version
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+        caches.match(event.request).then(function(response) {
+            return response || fetch(event.request);
+        }),
+    );
+});
+
+
+// remove old cached versions
+self.addEventListener('activate', function(event) {
+    event.waitUntil(
+        caches.keys().then(function(cacheNames) {
+            return Promise.all(
+                cacheNames
+                .filter(function(cacheName) {
+                    return cacheName != cacheVersion;
+                })
+                .map(function(cacheName) {
+                    return caches.delete(cacheName);
+                }),
+            );
+        }),
+    );
 });
