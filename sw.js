@@ -1,6 +1,6 @@
 // https://web.dev/offline-cookbook/
 const $ASSETS = [
-    "?source=pwa",
+    "/?source=pwa",
     "/",
     "css/main.css",
     "js/main.js",
@@ -18,7 +18,7 @@ const $ASSETS = [
     "manifest.json"
 ];
 
-let cacheVersion = "countdown-1.1";
+let cacheVersion = "countdown-1.0";
 
 // cache assets
 self.addEventListener("install", event => {
