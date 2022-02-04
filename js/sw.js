@@ -16,14 +16,14 @@ const ASSETS = [
 let cache_name = "v1";
 
 self.addEventListener("install", event => {
-    console.log("installing...");
+    console.log("start server worker");
     event.waitUntil(
         caches
-            .open(cache_name)
-            .then(cache => {
-                return cache.addAll(ASSETS);
-            })
-            .catch(err => console.log(err))
+        .open(cache_name)
+        .then(cache => {
+            return cache.addAll(ASSETS);
+        })
+        .catch(err => console.log(err))
     );
 });
 
