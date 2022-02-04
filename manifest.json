@@ -1,38 +1,44 @@
 {
-  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "Ted Talk Timer",
-  "short_name": "Timer",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#000",
-  "description": "This is a Countdown timer that is basically a re-implementation of the TED Countdown Timer used for TED Conference.",
-  "icons": [{
-    "src": "images/favicon-32x32.png",
-    "sizes": "32x32",
-    "type": "image/png"
-  },{
-    "src": "images/apple-icon-57x57.png",
-    "sizes": "57x57",
-    "type": "image/png"
-  }, {
-    "src": "images/apple-icon-72x72.png",
-    "sizes": "72x72",
-    "type": "image/png"
-  }, {
-    "src": "images/favicon-96x96.png ",
-    "sizes": "96x96",
-    "type": "image/png"
-  }, {
-    "src": "images/apple-icon-144x144.png",
-    "sizes": "144x144",
-    "type": "image/png"
-  }, {
-    "src": "images/apple-icon-180x180.png",
-    "sizes": "180x180",
-    "type": "image/png"
-  }, {
-    "src": "images/android-icon-192x192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  }]
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "Ted Talk Timer",
+    "short_name": "Talk Timer",
+    "start_url": "/?source=pwa",
+    "scope": "/",
+    "display": "fullscreen",
+    "background_color": "#000",
+    "theme_color": "#000",
+    "description": "This is a Countdown timer that is basically a re-implementation of the TED Countdown Timer used for TED Conference.",
+    "icons": [{
+        "src": "/images/vector.svg",
+        "type": "image/svg+xml",
+        "sizes": "512x512"
+    }, {
+        "src": "/images/apple-icon-57x57.png",
+        "sizes": "57x57",
+        "type": "image/png"
+    }, {
+        "src": "/images/apple-icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png"
+    }, {
+        "src": "/images/favicon-96x96.png ",
+        "sizes": "96x96",
+        "type": "image/png"
+    }, {
+        "src": "/images/apple-icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+    }, {
+        "src": "/images/apple-icon-180x180.png",
+        "sizes": "180x180",
+        "type": "image/png"
+    }, {
+        "src": "/images/android-icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }, {
+        "src": "/images/512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }]
 }
