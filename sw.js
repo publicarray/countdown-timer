@@ -18,7 +18,7 @@ const $ASSETS = [
     "manifest.json"
 ];
 
-let cacheVersion = "countdown-1.0";
+let cacheVersion = "countdown-1.1";
 
 // cache assets
 self.addEventListener("install", event => {
