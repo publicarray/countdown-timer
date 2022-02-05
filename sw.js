@@ -2,7 +2,7 @@
 const $ASSETS = [
     "/?source=pwa",
     "/",
-    "/slider.html",
+    "/slider",
     "css/main.css",
     "js/main.js",
     "images/logo.svg",
