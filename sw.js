@@ -2,6 +2,7 @@
 const $ASSETS = [
     "/?source=pwa",
     "/",
+    "/slider.html",
     "css/main.css",
     "js/main.js",
     "images/logo.svg",
@@ -18,7 +19,7 @@ const $ASSETS = [
     "manifest.json"
 ];
 
-let cacheVersion = "countdown-1.1";
+let cacheVersion = "countdown-1.2";
 
 // cache assets
 self.addEventListener("install", event => {
